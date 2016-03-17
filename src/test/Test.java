@@ -14,6 +14,6 @@ import projectEuler.*;
 public class Test {
 	public static void main(String[] args){
 		ProjectEuler003 pe = new ProjectEuler003();
-		System.out.println(pe.solve("600851475143"));
+		System.out.println(pe.solve(Long.valueOf("600851475143")));
 	}
 }

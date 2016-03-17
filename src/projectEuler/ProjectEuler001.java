@@ -11,7 +11,7 @@ package projectEuler;
  *
  */
 
-public class ProjectEuler001 implements Solvable{
+public class ProjectEuler001{
 	
 	/**
 	 * The default number of iterations to perform.
@@ -33,8 +33,7 @@ public class ProjectEuler001 implements Solvable{
 		return finalSum;
 	}
 
-	@Override
-	public <T> String solve(T... args) {
+	public String solve() {
 		String answer = Integer.toString(findSumOfMultiples());
 		
 		//Debug

@@ -13,7 +13,7 @@ package projectEuler;
  * @author Alex
  *
  */
-public class ProjectEuler002 implements Solvable{
+public class ProjectEuler002{
 	
 	/**
 	 * Calculation will stop if x >= MAX_VALUE
@@ -40,8 +40,7 @@ public class ProjectEuler002 implements Solvable{
 		return finalSum;
 	}
 
-	@Override
-	public <T> String solve(T... args) {
+	public String solve() {
 		String answer = Integer.toString(findSumOfEvenFibonacci());		
 		
 		//Debug
