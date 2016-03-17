@@ -30,15 +30,16 @@ public class ProjectEuler001 implements Solvable{
 			}
 		}
 		
-		//Print it for debugging
-		System.out.println(finalSum);
-		
 		return finalSum;
 	}
 
 	@Override
 	public String solve() {
 		String answer = Integer.toString(findSumOfMultiples());
+		
+		//Debug
+		System.out.println(answer);
+		
 		return answer;
 	}
 }

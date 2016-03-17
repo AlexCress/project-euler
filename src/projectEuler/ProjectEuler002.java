@@ -13,19 +13,41 @@ package projectEuler;
  * @author Alex
  *
  */
-
 public class ProjectEuler002 implements Solvable{
+	
 	/**
 	 * Calculation will stop if x >= MAX_VALUE
 	 */
 	public final static int MAX_VALUE = 4000000;
 	
-	
+	public int findSumOfEvenFibonacci(){
+		int finalSum = 0;
+		int lastNum = 1;
+		int currentNum = 1;
+		
+		while(currentNum < MAX_VALUE){			
+						
+			if(currentNum % 2 == 0){
+				finalSum += currentNum;
+			}
+			
+			//Add last and current numbers together, update last
+			int temp = currentNum;
+			currentNum += lastNum;
+			lastNum = temp;
+		}
+		
+		return finalSum;
+	}
 
 	@Override
 	public String solve() {
-		// TODO Auto-generated method stub
-		return null;
+		String answer = Integer.toString(findSumOfEvenFibonacci());		
+		
+		//Debug
+		System.out.println(answer);
+		
+		return answer;
 	}
 	
 }

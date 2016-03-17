@@ -1,6 +1,6 @@
 package test;
 
-import projectEuler.ProjectEuler001;
+import projectEuler.*;
 
 /**
  * 
@@ -13,7 +13,7 @@ import projectEuler.ProjectEuler001;
  */
 public class Test {
 	public static void main(String[] args){
-		ProjectEuler001 pe001 = new ProjectEuler001();
-		pe001.findSumOfMultiples();
+		ProjectEuler002 pe = new ProjectEuler002();
+		pe.solve();
 	}
 }
