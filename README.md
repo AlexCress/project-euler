@@ -1,4 +1,4 @@
 # project-euler
 Simple programming challenges from projecteuler.net
 
-Each Project Euler challenge is contained in its own class. This is somewhat cumbersome for the smaller challenges, which could be contained in its own method; however, this is to accomodate larger challeneges which may require multiple methods. Subject to change as I continue through each challenge.
+Each Project Euler challenge is contained in its own package. This is somewhat cumbersome for smaller challenges which could easily be contained within a single method; however, this is to accomodate for larger challenges which may require multiple classes. 
