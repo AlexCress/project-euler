@@ -1,7 +1,7 @@
 package projectEuler;
 
 /**
- * Project challenge:
+ * Challenge:
  * <p>
  * If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
  * <p>
@@ -11,7 +11,7 @@ package projectEuler;
  *
  */
 
-public class ProjectEuler001 {
+public class ProjectEuler001 implements Solvable{
 	
 	/**
 	 * The default number of iterations to perform.
@@ -19,13 +19,12 @@ public class ProjectEuler001 {
 	public static final int NUM_ITERATIONS = 1000;
 
 	/**
-	 * @param numOfIterations - the number of iterations to check
-	 * @return an <code>int</code> sum of all the multiples of 3 or 5 between 1 and <code>numOfIterations</code>
+	 * @return an <code>int</code> sum of all the multiples of 3 or 5 below <code>NUM_ITERATIONS</code>
 	 */
 	public int findSumOfMultiples(){
 		int finalSum = 0;
 		
-		for(int i = 0; i < NUM_ITERATIONS; i++){
+		for(int i = 1; i < NUM_ITERATIONS; i++){
 			if(i % 3 == 0 || i % 5 == 0){
 				finalSum += i;
 			}
@@ -35,5 +34,11 @@ public class ProjectEuler001 {
 		System.out.println(finalSum);
 		
 		return finalSum;
+	}
+
+	@Override
+	public String solve() {
+		String answer = Integer.toString(findSumOfMultiples());
+		return answer;
 	}
 }
