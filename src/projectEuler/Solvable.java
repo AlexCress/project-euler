@@ -8,5 +8,5 @@ package projectEuler;
  *
  */
 public interface Solvable {
-	public String solve();
+	public <T> String solve(T... args);
 }

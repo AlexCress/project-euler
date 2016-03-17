@@ -41,7 +41,7 @@ public class ProjectEuler002 implements Solvable{
 	}
 
 	@Override
-	public String solve() {
+	public <T> String solve(T... args) {
 		String answer = Integer.toString(findSumOfEvenFibonacci());		
 		
 		//Debug

@@ -34,7 +34,7 @@ public class ProjectEuler001 implements Solvable{
 	}
 
 	@Override
-	public String solve() {
+	public <T> String solve(T... args) {
 		String answer = Integer.toString(findSumOfMultiples());
 		
 		//Debug
