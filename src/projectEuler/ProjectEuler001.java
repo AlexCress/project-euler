@@ -1,4 +1,4 @@
-package pe001;
+package projectEuler;
 
 /**
  * Project challenge:
@@ -17,27 +17,22 @@ public class ProjectEuler001 {
 	 * The default number of iterations to perform.
 	 */
 	public static final int NUM_ITERATIONS = 1000;
-	
-	/**
-	 * No-arg constructor which will automatically perform the project's task.
-	 */
-	public ProjectEuler001(){
-		int answer = findSumOfMultiples(NUM_ITERATIONS);
-		System.out.println(answer);
-	}
 
 	/**
 	 * @param numOfIterations - the number of iterations to check
 	 * @return an <code>int</code> sum of all the multiples of 3 or 5 between 1 and <code>numOfIterations</code>
 	 */
-	public int findSumOfMultiples(int numOfIterations){
+	public int findSumOfMultiples(){
 		int finalSum = 0;
 		
-		for(int i = 0; i < numOfIterations; i++){
+		for(int i = 0; i < NUM_ITERATIONS; i++){
 			if(i % 3 == 0 || i % 5 == 0){
 				finalSum += i;
 			}
 		}
+		
+		//Print it for debugging
+		System.out.println(finalSum);
 		
 		return finalSum;
 	}
