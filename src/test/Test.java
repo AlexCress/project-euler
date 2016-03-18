@@ -13,7 +13,7 @@ import projectEuler.*;
  */
 public class Test {
 	public static void main(String[] args){
-		ProjectEuler006 pe = new ProjectEuler006();
-		System.out.println(pe.solve(1, 100));
+		ProjectEuler007 pe = new ProjectEuler007();
+		System.out.println(pe.solve(10001));
 	}
 }
