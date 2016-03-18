@@ -35,10 +35,7 @@ public class ProjectEuler001{
 
 	public String solve() {
 		String answer = Integer.toString(findSumOfMultiples());
-		
-		//Debug
-		System.out.println(answer);
-		
+
 		return answer;
 	}
 }

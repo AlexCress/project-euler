@@ -42,10 +42,7 @@ public class ProjectEuler002{
 
 	public String solve() {
 		String answer = Integer.toString(findSumOfEvenFibonacci());		
-		
-		//Debug
-		System.out.println(answer);
-		
+
 		return answer;
 	}
 	
