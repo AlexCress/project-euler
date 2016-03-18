@@ -1,8 +1,5 @@
 package projectEuler;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-
 /**
  * 
  * Challenge:

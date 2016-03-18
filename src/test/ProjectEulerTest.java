@@ -32,6 +32,12 @@ public class ProjectEulerTest {
 	@Test
 	public void pe003Test(){
 		ProjectEuler003 pe = new ProjectEuler003();
-		assertEquals("29", pe.solve(Long.valueOf("600851475143")));
+		assertEquals("29", pe.solve(Long.valueOf("13195")));
+	}
+	
+	@Test
+	public void pe004Test(){
+		ProjectEuler004 pe = new ProjectEuler004();
+		assertEquals("9009", pe.solve(2));
 	}
 }
