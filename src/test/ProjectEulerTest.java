@@ -46,4 +46,10 @@ public class ProjectEulerTest {
 		ProjectEuler005 pe = new ProjectEuler005();
 		assertEquals("2520", pe.solve(1, 10));
 	}
+	
+	@Test
+	public void pe006Test(){
+		ProjectEuler006 pe = new ProjectEuler006();
+		assertEquals("2640", pe.solve(1, 10));
+	}
 }
