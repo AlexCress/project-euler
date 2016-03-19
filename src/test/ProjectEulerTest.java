@@ -2,9 +2,13 @@ package test;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 
 import projectEuler.*;
+import projectEuler.ProjectEuler009.PythTriplet;
 
 
 /**
@@ -63,5 +67,47 @@ public class ProjectEulerTest {
 	public void pe008Test(){
 		ProjectEuler008 pe = new ProjectEuler008();
 		assertEquals("5832", pe.solve(4));
+	}
+	
+	@Test
+	public void pe009Test(){
+		ProjectEuler009 pe = new ProjectEuler009();
+		assertEquals(60, pe.solve(12));
+	}
+	
+	@Test
+	public void pe009TestExhaustive(){
+		//Used to control the amount of iterations
+		final int ITERATIONS = 1000;
+		//There may be 2 or more valid Triplets that add up to the same sum, just for logging
+		int exceptionsResolved = 0; 
+		//Time tracking
+		long startTime = System.currentTimeMillis();
+		
+		ProjectEuler009 pe = new ProjectEuler009();
+		
+		List<PythTriplet> pyth = pe.getTriplets(ITERATIONS);
+		for(int i = 0; i < ITERATIONS; i++){
+			PythTriplet tempPyth = pyth.get(i);
+			long sum = tempPyth.getSum();
+			long product = tempPyth.getProduct();
+			try{
+				assertEquals(product, pe.solve(sum));
+			}catch(AssertionError e){
+				long a = tempPyth.getA();
+				long b = tempPyth.getB();
+				long c = tempPyth.getC();
+				
+				if(a * a + b * b == c * c){
+					exceptionsResolved++;
+				}
+				else{			
+					System.out.println("Unresolved exception: " + pyth.get(i).toString() + e.getMessage());
+				}
+			}	
+		}
+		long endTime = System.currentTimeMillis();
+		System.out.printf("pe009TestExhaustive complete!%nIterations: %d%nExceptions Resolved: %d%nTotal Time: %dms", 
+				ITERATIONS, exceptionsResolved, endTime - startTime);
 	}
 }
