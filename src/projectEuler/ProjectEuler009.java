@@ -43,7 +43,7 @@ public class ProjectEuler009 {
 	public long solve(final long sum){
 		long tempSum = 0;
 		
-		//Pseudo-infinte loop.
+		//Pseudo-infinte loop
 		for(int m = 2; m < Integer.MAX_VALUE; m++){
 			//Constraint "m − n is odd", set n accordingly and increment by 2
 			for(int n = (m % 2 == 0) ? 1 : 2; n < m; n += 2){	

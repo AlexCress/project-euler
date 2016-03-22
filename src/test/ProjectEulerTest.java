@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import func.PrimeFunc;
 import projectEuler.*;
 import projectEuler.ProjectEuler009.PythTriplet;
 
@@ -20,6 +21,11 @@ import projectEuler.ProjectEuler009.PythTriplet;
  *
  */
 public class ProjectEulerTest {
+	
+	@Test
+	public void isPrimeTest(){
+		assertTrue(PrimeFunc.isPrime(17));
+	}
 
 	@Test
 	public void pe001Test(){
@@ -77,16 +83,18 @@ public class ProjectEulerTest {
 	
 	@Test
 	public void pe009TestExhaustive(){
+		//Time tracking
+		long startTime = System.currentTimeMillis();
+		
 		//Used to control the amount of iterations
 		final int ITERATIONS = 1000;
 		//There may be 2 or more valid Triplets that add up to the same sum, just for logging
 		int exceptionsResolved = 0; 
-		//Time tracking
-		long startTime = System.currentTimeMillis();
 		
-		ProjectEuler009 pe = new ProjectEuler009();
-		
+		ProjectEuler009 pe = new ProjectEuler009();	
+		//Get specified amount of valid Pythagorean Triplets
 		List<PythTriplet> pyth = pe.getTriplets(ITERATIONS);
+		
 		for(int i = 0; i < ITERATIONS; i++){
 			PythTriplet tempPyth = pyth.get(i);
 			long sum = tempPyth.getSum();
@@ -94,6 +102,7 @@ public class ProjectEulerTest {
 			try{
 				assertEquals(product, pe.solve(sum));
 			}catch(AssertionError e){
+				
 				long a = tempPyth.getA();
 				long b = tempPyth.getB();
 				long c = tempPyth.getC();
@@ -109,5 +118,11 @@ public class ProjectEulerTest {
 		long endTime = System.currentTimeMillis();
 		System.out.printf("pe009TestExhaustive complete!%nIterations: %d%nExceptions Resolved: %d%nTotal Time: %dms", 
 				ITERATIONS, exceptionsResolved, endTime - startTime);
+	}
+	
+	@Test
+	public void pe010Test(){
+		ProjectEuler010 pe = new ProjectEuler010();
+		assertEquals(17, pe.solve(10));
 	}
 }
