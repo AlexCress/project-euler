@@ -1,5 +1,10 @@
 package test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
 import projectEuler.*;
 
 /**
@@ -12,8 +17,13 @@ import projectEuler.*;
  * 
  */
 public class Test {
+	
+
+
 	public static void main(String[] args){
-		ProjectEuler010 pe = new ProjectEuler010();
-		System.out.println(pe.solve(2000000));
+		
+		
+		ProjectEuler011 pe = new ProjectEuler011();
+		System.out.println(pe.solve());
 	}
 }
