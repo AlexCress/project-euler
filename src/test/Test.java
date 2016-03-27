@@ -21,9 +21,13 @@ public class Test {
 
 
 	public static void main(String[] args){
+		long start = System.currentTimeMillis();
 		
+		ProjectEuler012 pe = new ProjectEuler012();
+		System.out.println(pe.solve(500));
 		
-		ProjectEuler011 pe = new ProjectEuler011();
-		System.out.println(pe.solve());
+		long end = System.currentTimeMillis();
+		
+		System.out.println("Running time: " + (end - start));
 	}
 }
