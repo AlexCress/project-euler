@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import func.PrimeFunc;
+import func.NumberFunc;
 import projectEuler.*;
 import projectEuler.ProjectEuler009.PythTriplet;
 
@@ -24,7 +24,7 @@ public class ProjectEulerTest {
 	
 	@Test
 	public void isPrimeTest(){
-		assertTrue(PrimeFunc.isPrime(17));
+		assertTrue(NumberFunc.isPrime(17));
 	}
 
 	@Test

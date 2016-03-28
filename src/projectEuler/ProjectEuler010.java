@@ -1,6 +1,6 @@
 package projectEuler;
 
-import func.PrimeFunc;
+import func.NumberFunc;
 
 public class ProjectEuler010 {
 	
@@ -9,7 +9,7 @@ public class ProjectEuler010 {
 		long finalSum = 0;
 		
 		for(int i = 2; i < ceiling; i++){
-			if(PrimeFunc.isPrime(i)){
+			if(NumberFunc.isPrime(i)){
 				finalSum += i;
 			}
 		}

@@ -1,6 +1,6 @@
 package func;
 
-public class PrimeFunc {
+public class NumberFunc {
 	
 	public static boolean isPrime(final long number){
 		
