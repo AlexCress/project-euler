@@ -3,6 +3,8 @@ package projectEuler;
 import java.math.BigInteger;
 import java.util.Scanner;
 
+import javax.swing.JPanel;
+
 
 /**
  * Challenge:<p>
@@ -145,7 +147,7 @@ public class ProjectEuler013 {
 			
 			System.out.println("\"" + line + "\",");
 		}
-		
+		JPanel p = new JPanel();
 		in.close();
 		
 	}
