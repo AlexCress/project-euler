@@ -143,6 +143,12 @@ public class ProjectEulerTest {
 	@Test
 	public void pe015Test(){
 		ProjectEuler015 pe = new ProjectEuler015();
-		assertEquals(6, pe.solve(2, 2));
+		assertEquals("6", pe.solve(2, 2).toString());
+	}
+	
+	@Test
+	public void pe016Test(){
+		ProjectEuler016 pe = new ProjectEuler016();
+		assertEquals("26", pe.solve(2, 15).toString());
 	}
 }

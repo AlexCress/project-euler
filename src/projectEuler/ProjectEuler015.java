@@ -1,9 +1,6 @@
 package projectEuler;
 
 import java.math.BigInteger;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 
 /**
@@ -14,11 +11,34 @@ import java.util.Map;
  * @author Alex
  *
  */
+
 public class ProjectEuler015 {
+	//Note: I changes all relevant longs to BigInteger because I wanted to try a 200x200 grid. 
+	//Not necessary for the challenge, but still insanely fast (31ms for 200x200).
+	//P.S. Recursion is probably not the best way to do this, I am sure there is some sort of
+	//mathematical formula for this somewhere out there. 
+	
+	/**
+	 * Values set with parameters in <code>solve(int width, int height)</code>.
+	 * Only purpose is so recursive method can access them.
+	 */
 	private int width, height;
 
+	/**
+	 * Holds previously-calculated values for each node. This enables
+	 * significantly quicker solving times.
+	 */
 	private BigInteger[][] nodePaths;
 
+	/**
+	 * Returns the amount of possible paths you can take starting at
+	 * (0, 0) in a <code>width</code> x <code>height</code> grid,
+	 * with the constraint being able to only move right or down at each node.
+	 * 
+	 * @param width - width of the grid
+	 * @param height -  height of the grid
+	 * @return a <code>BigInteger</code> possible paths
+	 */
 	public BigInteger solve(final int width, final int height){
 		//So recursive method can access
 		this.width = width;
@@ -53,6 +73,7 @@ public class ProjectEuler015 {
 			return nodePaths[x][y];
 		}	
 		
+		//Not at the end
 		if(movesRemain > 0){	
 			
 			BigInteger totalPaths = new BigInteger("0");

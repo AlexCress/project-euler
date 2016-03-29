@@ -53,7 +53,7 @@ public class ProjectEuler012 {
 	 * 0 if all possibilities <= <code>Long.MAX_VALUE</code> have been checked,
 	 * or -1 if <code>numberOfDivisors</code> <= 0.
 	 */
-	public long solve(int numberOfDivisors){
+	public long solve(final int numberOfDivisors){
 		
 		if(numberOfDivisors < 1){
 			return -1;
@@ -75,10 +75,11 @@ public class ProjectEuler012 {
 			}
 			
 			//Multiplying both coprimes together will return the number of divisors
+			//Note: this corresponds to the triangle number calculated below, not i
 			int divisors = firstCoprime * secondCoprime;
 			
 			//If a solution is discovered, convert i to its corresponding triangle number and return
-			if(divisors > numberOfDivisors){
+			if(divisors >= numberOfDivisors){
 				return i * (i + 1) / 2;			
 			}		
 		}		

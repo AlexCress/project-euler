@@ -23,8 +23,8 @@ public class Test {
 	public static void main(String[] args){
 		long start = System.currentTimeMillis();
 		
-		ProjectEuler015 pe = new ProjectEuler015();
-		System.out.println(pe.solve(200, 200));
+		ProjectEuler016 pe = new ProjectEuler016();
+		System.out.println(pe.solve(2, 1000));
 		
 		long end = System.currentTimeMillis();
 		
