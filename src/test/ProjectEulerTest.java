@@ -137,4 +137,12 @@ public class ProjectEulerTest {
 		ProjectEuler012 pe = new ProjectEuler012();
 		assertEquals(28, pe.solve(5));
 	}
+	
+	//TODO didn't add tests for 13, 14.
+	
+	@Test
+	public void pe015Test(){
+		ProjectEuler015 pe = new ProjectEuler015();
+		assertEquals(6, pe.solve(2, 2));
+	}
 }
