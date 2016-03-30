@@ -92,10 +92,10 @@ public class ProjectEuler012 {
 			return 0;
 		}
 
-		int divisors = 2;
+		int divisors = 0;
 		long sqrt = (long) Math.sqrt(number);
 		
-		for(int i = 2; i < sqrt; i++){
+		for(int i = 1; i <= sqrt; i++){
 			if(number % i == 0){
 				divisors += 2;
 			}
