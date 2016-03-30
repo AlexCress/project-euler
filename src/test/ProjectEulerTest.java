@@ -116,8 +116,8 @@ public class ProjectEulerTest {
 			}	
 		}
 		long endTime = System.currentTimeMillis();
-		System.out.printf("pe009TestExhaustive complete!%nIterations: %d%nExceptions Resolved: %d%nTotal Time: %dms", 
-				ITERATIONS, exceptionsResolved, endTime - startTime);
+		//System.out.printf("pe009TestExhaustive complete!%nIterations: %d%nExceptions Resolved: %d%nTotal Time: %dms", 
+		//		ITERATIONS, exceptionsResolved, endTime - startTime);
 	}
 	
 	@Test
@@ -150,5 +150,11 @@ public class ProjectEulerTest {
 	public void pe016Test(){
 		ProjectEuler016 pe = new ProjectEuler016();
 		assertEquals("26", pe.solve(2, 15).toString());
+	}
+	
+	@Test
+	public void pe017Test(){
+		ProjectEuler017 pe = new ProjectEuler017();
+		assertEquals(19, pe.solve(1, 5));
 	}
 }
