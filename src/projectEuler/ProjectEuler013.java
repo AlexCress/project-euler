@@ -147,7 +147,6 @@ public class ProjectEuler013 {
 			
 			System.out.println("\"" + line + "\",");
 		}
-		JPanel p = new JPanel();
 		in.close();
 		
 	}

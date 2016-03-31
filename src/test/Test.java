@@ -1,7 +1,7 @@
 package test;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import projectEuler.*;
 
@@ -15,30 +15,13 @@ import projectEuler.*;
  * 
  */
 public class Test {
-	
 
-
-	public static void main(String[] args){
+	public static void main(String[] args) throws FileNotFoundException, IOException{
+		
 		long start = System.currentTimeMillis();
 		
-		ProjectEuler017 pe = new ProjectEuler017();
-		System.out.println(pe.solve(1, 1000));
-		
-		/*
-		Scanner s = new Scanner(System.in);
-		while(s.hasNextLine()){
-			try{
-				int i = s.nextInt();
-				
-				System.out.println(pe.getPhrase(i));
-			}catch(InputMismatchException e){
-				System.out.println("Error: incorrect input. Please enter a valid integer in the range of "
-						+ "1 <= i <= " + Integer.MAX_VALUE);
-				s.nextLine();
-			}
-
-		}
-		*/
+		ProjectEuler018 pe = new ProjectEuler018("challenge018.txt");
+		System.out.println(pe.solve());
 		
 		long end = System.currentTimeMillis();
 		

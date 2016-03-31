@@ -13,7 +13,7 @@ import java.math.BigInteger;
  */
 
 public class ProjectEuler015 {
-	//Note: I changes all relevant longs to BigInteger because I wanted to try a 200x200 grid. 
+	//Note: I changed all relevant longs to BigInteger because I wanted to try a 200x200 grid. 
 	//Not necessary for the challenge, but still insanely fast (31ms for 200x200).
 	//P.S. Recursion is probably not the best way to do this, I am sure there is some sort of
 	//mathematical formula for this somewhere out there. 
@@ -47,7 +47,7 @@ public class ProjectEuler015 {
 		//Can only move right or down, min/max moves are equal
 		int requiredMoves = width + height;		
 		
-		//Saves the amount of paths from a certain node
+		//Records the amount of paths from a certain node
 		//+1 to both dimensions because a "node" is any corner on the grid
 		//i.e. a 3x3 box will have 4x4 nodes.
 		nodePaths = new BigInteger[width + 1][height + 1];
