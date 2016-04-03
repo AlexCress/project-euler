@@ -20,9 +20,7 @@ public class Test {
 		
 		long start = System.currentTimeMillis();
 		
-		ProjectEuler018 pe = new ProjectEuler018();
-		pe.initialize();
-		pe.writeToFile("challenge067.txt");
+		ProjectEuler019 pe = new ProjectEuler019();
 
 		System.out.println(pe.solve());
 		
