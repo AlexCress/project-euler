@@ -20,9 +20,9 @@ public class Test {
 		
 		long start = System.currentTimeMillis();
 		
-		ProjectEuler020 pe = new ProjectEuler020();
+		ProjectEuler021 pe = new ProjectEuler021();
 
-		System.out.println(pe.solve(100));
+		System.out.println(pe.solve(10000));
 		
 		long end = System.currentTimeMillis();
 		

@@ -171,6 +171,12 @@ public class ProjectEulerTest {
 	}
 	
 	@Test
+	public void pe021Test(){
+		ProjectEuler021 pe = new ProjectEuler021();
+		assertEquals(31626, pe.solve(10000));
+	}
+	
+	@Test
 	public void pe067Test(){
 		ProjectEuler067 pe = new ProjectEuler067();
 		assertEquals(7273, pe.solve("challenge067.txt"));
