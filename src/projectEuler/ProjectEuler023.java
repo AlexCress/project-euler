@@ -49,6 +49,7 @@ public class ProjectEuler023 {
 		}
 		
 		return sum;
+		//aa
 	}
 	
 	private boolean isSumOfAbundantNumbers(final int number){
