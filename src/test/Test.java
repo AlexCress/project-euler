@@ -1,7 +1,12 @@
 package test;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.imageio.ImageIO;
 
 import projectEuler.*;
 
@@ -16,13 +21,13 @@ import projectEuler.*;
  */
 public class Test {
 
-	public static void main(String[] args) throws FileNotFoundException, IOException{
-		
+	public static void main(String[] args){
+
 		long start = System.currentTimeMillis();
 		
-		ProjectEuler021 pe = new ProjectEuler021();
+		ProjectEuler022 pe = new ProjectEuler022();
 
-		System.out.println(pe.solve(10000));
+		System.out.println(pe.solve());
 		
 		long end = System.currentTimeMillis();
 		
