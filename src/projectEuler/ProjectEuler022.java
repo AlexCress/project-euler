@@ -21,7 +21,6 @@ public class ProjectEuler022 {
 		
 		while(iterator.hasNext()){
 			String name = iterator.next();
-			System.out.println(name + ":" + i);
 
 			nameScoreSum += getNameScore(name, i);
 			i++;

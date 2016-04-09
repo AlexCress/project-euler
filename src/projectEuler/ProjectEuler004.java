@@ -4,7 +4,8 @@ package projectEuler;
 /**
  * Challenge:
  * <p>
- * A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+ * A palindromic number reads the same both ways. The largest palindrome 
+ * made from the product of two 2-digit numbers is 9009 = 91 × 99.
  * <p>
  * Find the largest palindrome made from the product of two 3-digit numbers.
  * @author Alex
@@ -49,11 +50,8 @@ public class ProjectEuler004 {
 		int reverse = 0;
 		
 		while(temp > 1){
-			//Get last number
 			int last = temp % 10;
-			//Adds last number to reversed number
 			reverse = reverse * 10 + last;
-			//Remove last digit
 			temp /= 10;
 		}
 		

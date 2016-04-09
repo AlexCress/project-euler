@@ -31,7 +31,6 @@ public class ProjectEuler002{
 				finalSum += currentNum;
 			}
 			
-			//Add last and current numbers together, update last
 			int temp = currentNum;
 			currentNum += lastNum;
 			lastNum = temp;
