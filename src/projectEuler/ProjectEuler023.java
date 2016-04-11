@@ -1,40 +1,40 @@
 package projectEuler;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
+/**
+ * Project description: https://projecteuler.net/problem=23
+ *
+ */
 public class ProjectEuler023 {
 	
+	//Both constants given in challenge description
 	public static final int MIN_ABUNDANT = 12;
 	public static final int MAX_ABUNDANT = 28123;
+	
 	private ArrayList<Integer> abundantNumbers;
+	private HashSet<Integer> abNumSet;
 	
 	public int solve(){
 		
 		abundantNumbers = new ArrayList<Integer>(6965); //6965 taken after solution was confirmed, optimization
-		
-		//12 is given in challenge as first abundant number
-		//28123 is given as the upper bound
-		long start = System.currentTimeMillis();
+		abNumSet = new HashSet<Integer>(6965);
+
 		for(int i = MIN_ABUNDANT; i <= MAX_ABUNDANT; i++){
 			if(isAbundant(i)){
 				abundantNumbers.add(i);
+				abNumSet.add(i);
 			}
 		}
-		long end = System.currentTimeMillis();
-		
-		System.out.println("Time for initialization: " + (end - start));
-		
-		start = System.currentTimeMillis();
+
 		int nonabundantSum = 0;
 		for(int i = 1; i <= MAX_ABUNDANT; i++){
 			if( ! (isSumOfAbundantNumbers(i))){
 				nonabundantSum += i;
 			}
 		}
-		end = System.currentTimeMillis();
-		
-		System.out.println("Time for solving: " + (end - start));
-				
+
 		return nonabundantSum;
 	}
 	
@@ -76,8 +76,9 @@ public class ProjectEuler023 {
 			if(number - abundantNumbers.get(i) < MIN_ABUNDANT){
 				return false;
 			}
+
 			int n = number - abundantNumbers.get(i);
-			if(abundantNumbers.contains(n)){
+			if(abNumSet.contains(n)){
 				return true;
 			}
 		}
